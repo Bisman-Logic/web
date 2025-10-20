@@ -7,7 +7,7 @@ function App() {
       <header className="hero">
         <div className="container">
           <div className="logo-section">
-            <img src="/logo.svg" alt="Bisman Logic LLC" className="company-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bisman Logic LLC" className="company-logo" />
             <div className="company-info">
               <h1 className="company-name">Bisman Logic LLC</h1>
               <p className="tagline">Secure Custom Applications</p>
