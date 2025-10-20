@@ -52,6 +52,29 @@ npm run build
 
 The production files will be generated in the `dist/` directory.
 
+### Deployment
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+**Live Site:** https://bisman-logic.github.io/web/
+
+#### How GitHub Pages Deployment Works
+
+1. When you push to the `main` branch, GitHub Actions automatically:
+   - Builds the project using `npm run build`
+   - Deploys the `dist/` folder to GitHub Pages
+
+2. The site is available at: https://bisman-logic.github.io/web/
+
+#### Manual Deployment
+
+If you need to deploy manually, you can run:
+```bash
+npm run deploy
+```
+
+This will build the project locally. The GitHub Actions workflow will handle the actual deployment to GitHub Pages.
+
 ### Preview Production Build
 
 ```bash
