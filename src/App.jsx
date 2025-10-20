@@ -7,8 +7,11 @@ function App() {
       <header className="hero">
         <div className="container">
           <div className="logo-section">
-            <h1 className="company-name">Bisman Logic LLC</h1>
-            <p className="tagline">Secure Custom Applications</p>
+            <img src="/logo.svg" alt="Bisman Logic LLC" className="company-logo" />
+            <div className="company-info">
+              <h1 className="company-name">Bisman Logic LLC</h1>
+              <p className="tagline">Secure Custom Applications</p>
+            </div>
           </div>
           <nav className="nav">
             <a href="#about">About</a>
@@ -39,9 +42,9 @@ function App() {
         <div className="container">
           <h2 className="section-title">About Us</h2>
           <p className="section-text">
-            Bisman Logic LLC is a professional software engineering company dedicated to 
-            creating secure, custom applications for businesses and organizations. With 
-            expertise in modern web and desktop technologies, we deliver robust solutions 
+            Bisman Logic LLC is a professional software engineering company dedicated to
+            creating secure, custom applications for businesses and organizations. With
+            expertise in modern web and desktop technologies, we deliver robust solutions
             tailored to your specific needs.
           </p>
         </div>
@@ -121,8 +124,11 @@ function App() {
           </p>
           <div className="contact-info">
             <p className="contact-text">
-              Contact us to learn more about how we can help bring your ideas to life 
+              Contact us to learn more about how we can help bring your ideas to life
               with secure, professional software solutions.
+            </p>
+            <p className="contact-email">
+              <strong>Email:</strong> <a href="mailto:bismanlogic@gmail.com">bismanlogic@gmail.com</a>
             </p>
           </div>
         </div>

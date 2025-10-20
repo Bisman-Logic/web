@@ -19,10 +19,10 @@
 
 /* Header/Hero */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #5D718C 0%, #234059 100%);
+  color: #F2F1F0;
   padding: 1.5rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(64, 48, 42, 0.2);
 }
 
 .hero .container {
@@ -34,7 +34,21 @@
 }
 
 .logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   text-align: left;
+}
+
+.company-logo {
+  height: 125px;
+  width: auto;
+  border-radius: 100px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .company-name {
@@ -56,7 +70,7 @@
 }
 
 .nav a {
-  color: white;
+  color: #F2F1F0;
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.3s;
@@ -65,12 +79,13 @@
 
 .nav a:hover {
   opacity: 0.8;
+  color: #8697A6;
 }
 
 /* Hero Content */
 .hero-content {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #5D718C 0%, #234059 100%);
+  color: #F2F1F0;
   padding: 4rem 0 5rem;
   text-align: center;
 }
@@ -99,12 +114,13 @@
 }
 
 .badge {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(134, 151, 166, 0.3);
   backdrop-filter: blur(10px);
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(242, 241, 240, 0.4);
+  color: #F2F1F0;
 }
 
 /* Sections */
@@ -116,14 +132,14 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: #234059;
   font-weight: 700;
 }
 
 .section-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #555;
+  color: #40302A;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -131,7 +147,7 @@
 
 /* About Section */
 .about-section {
-  background: #f8f9fa;
+  background: #F2F1F0;
 }
 
 /* Services Section */
@@ -147,17 +163,17 @@
 }
 
 .service-card {
-  background: #f8f9fa;
+  background: #F2F1F0;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #e9ecef;
+  border: 1px solid #8697A6;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(93, 113, 140, 0.2);
 }
 
 .service-icon {
@@ -168,17 +184,17 @@
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #234059;
 }
 
 .service-card p {
-  color: #666;
+  color: #40302A;
   line-height: 1.6;
 }
 
 /* Technology Section */
 .tech-section {
-  background: #f8f9fa;
+  background: #F2F1F0;
 }
 
 .tech-grid {
@@ -192,13 +208,13 @@
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #8697A6;
 }
 
 .tech-item h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #667eea;
+  color: #234059;
   font-weight: 600;
 }
 
@@ -208,13 +224,13 @@
 
 .tech-item li {
   padding: 0.5rem 0;
-  color: #555;
+  color: #40302A;
   font-size: 1.1rem;
 }
 
 .tech-item li:before {
   content: "✓ ";
-  color: #667eea;
+  color: #5D718C;
   font-weight: bold;
   margin-right: 0.5rem;
 }
@@ -231,16 +247,35 @@
 
 .contact-text {
   font-size: 1.1rem;
-  color: #666;
+  color: #40302A;
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto;
 }
 
+.contact-email {
+  font-size: 1.2rem;
+  color: #234059;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-email a {
+  color: #5D718C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.contact-email a:hover {
+  color: #234059;
+  text-decoration: underline;
+}
+
 /* Footer */
 .footer {
-  background: #2c3e50;
-  color: white;
+  background: #234059;
+  color: #F2F1F0;
   padding: 2rem 0;
   text-align: center;
   margin-top: auto;
@@ -264,6 +299,12 @@
 
   .logo-section {
     text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .company-info {
+    align-items: center;
   }
 
   .company-name {
@@ -295,6 +336,16 @@
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .logo-section {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .company-logo {
+    height: 40px;
   }
 
   .company-name {
