@@ -1,16 +1,73 @@
-# React + Vite
+# Bisman Logic LLC Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional website for Bisman Logic LLC - a software engineering company specializing in secure custom applications using Electron and React.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bisman Logic LLC is a professional software engineering company dedicated to creating secure, custom applications for businesses and organizations. We specialize in:
 
-## React Compiler
+- **Desktop Applications**: Cross-platform desktop apps built with Electron
+- **Web Applications**: Modern, responsive web applications using React
+- **Security-First Development**: Applications designed with security as a core principle
+- **Custom Solutions**: Tailored software solutions for unique business requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Stack
 
-## Expanding the ESLint configuration
+This website is built with:
+- **React** - Modern UI library
+- **Vite** - Fast build tool and dev server
+- **CSS3** - Custom responsive styling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Bisman-Logic/web.git
+cd web
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The production files will be generated in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Features
+
+- ✅ Professional gradient design with modern UI
+- ✅ Fully responsive (mobile, tablet, desktop)
+- ✅ Smooth scroll navigation
+- ✅ Sections: About, Services, Technology Stack, Contact
+- ✅ Fast load times with Vite
+- ✅ Clean, maintainable code
+- ✅ SEO-friendly structure
+
+## License
+
+© 2025 Bisman Logic LLC. All rights reserved.
