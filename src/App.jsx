@@ -1,6 +1,21 @@
 import './App.css'
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="app">
       {/* Header/Hero Section */}
@@ -34,6 +49,10 @@ function App() {
             <span className="badge">React</span>
             <span className="badge">Security-First</span>
           </div>
+          <div className="hero-cta">
+            <a href="#contact" className="cta-button">Start Your Project</a>
+            <a href="#services" className="cta-button-secondary">Learn More</a>
+          </div>
         </div>
       </section>
 
@@ -47,6 +66,35 @@ function App() {
             expertise in modern web and desktop technologies, we deliver robust solutions
             tailored to your specific needs.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="section why-choose-section">
+        <div className="container">
+          <h2 className="section-title">Why Choose Bisman Logic?</h2>
+          <div className="why-grid">
+            <div className="why-card">
+              <div className="why-icon">⚡</div>
+              <h3>Fast Turnaround</h3>
+              <p>Efficient development process ensuring timely delivery without compromising quality</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">🎯</div>
+              <h3>Focused Expertise</h3>
+              <p>Specialized in Electron and React, providing deep knowledge and best practices</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">💼</div>
+              <h3>Professional Service</h3>
+              <p>Direct communication with experienced developers, no middlemen or bureaucracy</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">🔧</div>
+              <h3>Ongoing Support</h3>
+              <p>Continued maintenance and updates to keep your application running smoothly</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -115,6 +163,40 @@ function App() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="section process-section">
+        <div className="container">
+          <h2 className="section-title">Our Development Process</h2>
+          <div className="process-timeline">
+            <div className="process-step">
+              <div className="process-number">1</div>
+              <h3>Discovery & Planning</h3>
+              <p>Understanding your requirements and defining project scope</p>
+            </div>
+            <div className="process-step">
+              <div className="process-number">2</div>
+              <h3>Design & Architecture</h3>
+              <p>Creating technical specifications and system design</p>
+            </div>
+            <div className="process-step">
+              <div className="process-number">3</div>
+              <h3>Development</h3>
+              <p>Building your application with clean, maintainable code</p>
+            </div>
+            <div className="process-step">
+              <div className="process-number">4</div>
+              <h3>Testing & Deployment</h3>
+              <p>Rigorous testing and smooth deployment to production</p>
+            </div>
+            <div className="process-step">
+              <div className="process-number">5</div>
+              <h3>Support & Maintenance</h3>
+              <p>Ongoing support and updates as your needs evolve</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="section contact-section">
         <div className="container">
@@ -122,14 +204,58 @@ function App() {
           <p className="section-text">
             Ready to discuss your next project? Let's build something amazing together.
           </p>
-          <div className="contact-info">
-            <p className="contact-text">
-              Contact us to learn more about how we can help bring your ideas to life
-              with secure, professional software solutions.
-            </p>
-            <p className="contact-email">
-              <strong>Email:</strong> <a href="mailto:bismanlogic@gmail.com">bismanlogic@gmail.com</a>
-            </p>
+          <div className="contact-content">
+            <div className="contact-info-card">
+              <h3>Contact Information</h3>
+              <div className="contact-details">
+                <div className="contact-item">
+                  <span className="contact-icon">📧</span>
+                  <div>
+                    <strong>Email</strong>
+                    <p><a href="mailto:bismanlogic@gmail.com">bismanlogic@gmail.com</a></p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">💼</span>
+                  <div>
+                    <strong>Business Type</strong>
+                    <p>Software Engineering Consulting</p>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">🌍</span>
+                  <div>
+                    <strong>Availability</strong>
+                    <p>Remote Worldwide</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="contact-form-card">
+              <h3>Send a Message</h3>
+              <p className="form-description">
+                Have a project in mind? Fill out the form below and I'll get back to you as soon as possible.
+              </p>
+              <form className="contact-form" action="mailto:bismanlogic@gmail.com" method="post" encType="text/plain">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Your Name" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required placeholder="Project Inquiry" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button type="submit" className="submit-button">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -141,6 +267,17 @@ function App() {
           <p className="footer-tagline">Secure Custom Applications with Electron & React</p>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button 
+          className="scroll-to-top" 
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
     </div>
   )
 }
