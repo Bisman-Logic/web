@@ -8,9 +8,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -21,6 +23,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -28,18 +31,24 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes glow-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(93, 113, 140, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(93, 113, 140, 0.6);
   }
@@ -49,6 +58,7 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
@@ -231,12 +241,10 @@
   left: -100%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(242, 241, 240, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(242, 241, 240, 0.1),
+      transparent);
   animation: shimmer 8s infinite;
 }
 
@@ -328,7 +336,7 @@
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px dashed #F2F1F0;
   box-shadow: 0 4px 15px rgba(93, 113, 140, 0.4);
   animation: fade-in-up 1s ease 0.9s both;
 }
@@ -337,6 +345,7 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(93, 113, 140, 0.6);
   background: linear-gradient(135deg, #5D718C, #234059);
+  border: 2px solid #F2F1F0;
 }
 
 .cta-button-secondary {
@@ -348,7 +357,7 @@
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  border: 2px solid #F2F1F0;
+  border: 2px dashed #F2F1F0;
   animation: fade-in-up 1s ease 1s both;
 }
 
@@ -356,6 +365,7 @@
   background: rgba(242, 241, 240, 0.1);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(242, 241, 240, 0.3);
+  border: 2px solid #F2F1F0;
 }
 
 /* Sections */
@@ -435,12 +445,10 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(93, 113, 140, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(93, 113, 140, 0.1),
+      transparent);
   transition: left 0.5s ease;
 }
 
@@ -508,12 +516,10 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(93, 113, 140, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(93, 113, 140, 0.1),
+      transparent);
   transition: left 0.5s ease;
 }
 
@@ -838,12 +844,10 @@
   left: -100%;
   width: 200%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #8697A6,
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      #8697A6,
+      transparent);
   animation: shimmer 3s linear infinite;
 }
 
