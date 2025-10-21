@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,14 @@ function App() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
   }
 
   return (
@@ -28,11 +37,19 @@ function App() {
               <p className="tagline">Secure Custom Applications</p>
             </div>
           </div>
-          <nav className="nav">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#tech">Technology</a>
-            <a href="#contact">Contact</a>
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}></span>
+          </button>
+          <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+            <a href="#about" onClick={closeMobileMenu}>About</a>
+            <a href="#services" onClick={closeMobileMenu}>Services</a>
+            <a href="#tech" onClick={closeMobileMenu}>Technology</a>
+            <a href="#contact" onClick={closeMobileMenu}>Contact</a>
           </nav>
         </div>
       </header>
